@@ -1,0 +1,5 @@
+common\client\UserClient.class
+common\client\ProductClient.class
+common\dto\OrderDto.class
+common\dto\ProductDto.class
+common\dto\UserDto.class

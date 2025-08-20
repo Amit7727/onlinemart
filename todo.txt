@@ -1,0 +1,7 @@
+
+add docker later
+Move dependencies version to parent
+remove getter setter and replace with lombok
+create service class (move code from controller)
+swagger
+Actrs

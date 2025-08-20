@@ -1,0 +1,3 @@
+userservice\entity\User.class
+userservice\repo\UserRepository.class
+userservice\UserServiceApplication.class

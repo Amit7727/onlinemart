@@ -1,0 +1,30 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ordersdb
+    username: root
+    password: rootuser
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  cloud:
+    compatibility-verifier:
+      enabled: false
+# remove abv line'
+  application:
+    name: order-service
+
+user:
+  service:
+    url: http://localhost:8081
+product:
+  service:
+    url: http://localhost:8082
+
+management:
+  endpoints.web.exposure.include: health,info
+jwt:
+  secret: mysecretkeymysecretkeymysecretkey

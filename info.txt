@@ -1,0 +1,12 @@
+
+
+swagger -> 
+	product service -> http://localhost:8082/swagger-ui/index.html 
+	order service -> http://localhost:8083/swagger-ui/index.html 
+	user service -> http://localhost:8081/swagger-ui/index.html 
+	
+	
+mysql
+
+create database productsdb;
+create database userdb;

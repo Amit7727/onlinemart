@@ -1,0 +1,16 @@
+# user-service/src/main/resources/application.yaml
+spring:
+  application.name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: rootuser
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+management:
+  endpoints.web.exposure.include: health,info
+#  endpoint.health.show-details: when_authorized
+server:
+  port: 8081
