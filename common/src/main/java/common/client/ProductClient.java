@@ -9,5 +9,5 @@ import common.dto.ProductDto;
 @FeignClient(name="product-service", url="${product.service.url}")
 public interface ProductClient {
   @GetMapping("/api/products/{id}")
-  ProductDto getById(@PathVariable("id") Long id);
+  ProductDto getById(@PathVariable("id") String id);
 }

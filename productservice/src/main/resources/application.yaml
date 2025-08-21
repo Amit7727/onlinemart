@@ -1,14 +1,11 @@
 
 spring:
   application.name: product-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/productsdb
-    username: root
-    password: rootuser
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: productsdb
 management:
   endpoints.web.exposure.include: health,info
 server:

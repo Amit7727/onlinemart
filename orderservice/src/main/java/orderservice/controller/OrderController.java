@@ -25,7 +25,7 @@ public class OrderController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<Order> getById(@PathVariable("id") Long id) {
+  public ResponseEntity<Order> getById(@PathVariable("id") String id) {
     Optional<Order> orderOpt = service.getOrderById(id);
     return orderOpt.map(ResponseEntity::ok)
                    .orElse(ResponseEntity.notFound().build());
@@ -40,7 +40,7 @@ public class OrderController {
 
   // Upd order
   @PutMapping("/{id}")
-  public ResponseEntity<Order> update(@PathVariable("id") Long id, @RequestBody Order order) {
+  public ResponseEntity<Order> update(@PathVariable("id") String id, @RequestBody Order order) {
     Optional<Order> updatedOrder = service.updateOrder(id, order);
     return updatedOrder.map(ResponseEntity::ok)
                        .orElse(ResponseEntity.notFound().build());
@@ -48,7 +48,7 @@ public class OrderController {
 
 
   @DeleteMapping("/{id}")
-  public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
+  public ResponseEntity<Void> delete(@PathVariable("id") String id) {
     boolean deleted = service.deleteOrder(id);
     if (!deleted) {
       return ResponseEntity.notFound().build();

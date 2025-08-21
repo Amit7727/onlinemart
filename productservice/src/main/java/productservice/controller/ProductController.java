@@ -16,7 +16,7 @@ public class ProductController {
   private final ProductRepository repo;
   public ProductController(ProductRepository repo) { this.repo = repo; }
 
-  @GetMapping public List<Product> all() { return (List<Product>) repo.findAll(); }
+  @GetMapping public List<Product> all() { return repo.findAll(); }
 
   @GetMapping("/{id}") public ResponseEntity<Product> one(@PathVariable("id") Long id) {
     return repo.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());

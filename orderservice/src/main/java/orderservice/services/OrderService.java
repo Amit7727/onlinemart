@@ -39,7 +39,7 @@ public class OrderService {
     return repo.findAll();
   }
 
-  public Optional<Order> getOrderById(Long id) {
+  public Optional<Order> getOrderById(String id) {
     return repo.findById(id);
   }
 
@@ -47,14 +47,14 @@ public class OrderService {
     return repo.save(order);
   }
 
-  public Optional<Order> updateOrder(Long id, Order updatedOrder) {
+  public Optional<Order> updateOrder(String id, Order updatedOrder) {
     return repo.findById(id).map(existingOrder -> {
       existingOrder.setQuantity(updatedOrder.getQuantity());
       return repo.save(existingOrder);
     });
   }
 
-  public boolean deleteOrder(Long id) {
+  public boolean deleteOrder(String id) {
     if (!repo.existsById(id)) {
       return false;
     }

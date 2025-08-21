@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Order {
   @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
   private Long userId;
-  private Long productId;
+  private String productId;
   private Integer quantity;
   private Double total;
   public Long getId() {
@@ -21,10 +21,10 @@ public class Order {
   public void setUserId(Long userId) {
 	this.userId = userId;
   }
-  public Long getProductId() {
+  public String getProductId() {
 	return productId;
   }
-  public void setProductId(Long productId) {
+  public void setProductId(String productId) {
 	this.productId = productId;
   }
   public Integer getQuantity() {
