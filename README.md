@@ -9,6 +9,8 @@ The app will start on port 8083 by default
 
 You can test APIs through any REST client Postman
 
+will attach postman collecion and swagger in info.txt
+
 ----------------------------------------------------------
 
 API Examples
